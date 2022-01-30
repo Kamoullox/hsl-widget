@@ -1,1 +1,38 @@
-<p>hsl-widget works!</p>
+<div class="hsl">
+  <h2>Palette</h2>
+
+  <div class="hsl__configurator">
+
+    <div class="hsl__colors">
+      <div class="hsl__color primary" [ngStyle]="{'background-color': primary}"></div>
+      <div class="hsl__color analogue" [ngStyle]="{'background-color': analogue}"></div>
+      <div class="hsl__color complementaire" [ngStyle]="{'background-color': complementaire}"></div>
+    </div>
+
+    <div class="hsl__sliders">
+
+      <div class="hsl__hue hsl__slider">
+        <P>H</P>
+        <mat-slider step="1" min="0" max="360" [(ngModel)]="hue" (change)="onChangeColor()"></mat-slider>
+        <input matInput type="number" [(ngModel)]="hue" (change)="onChangeColor()" />
+      </div>
+
+      <div class="hsl__saturation hsl__slider">
+        <P>S</P>
+        <mat-slider step="1" min="0" max="100" [(ngModel)]="saturation" (change)="onChangeColor()"></mat-slider>
+        <input matInput type="number" [(ngModel)]="saturation" (change)="onChangeColor()" />
+      </div>
+
+      <div class="hsl__lightness hsl__slider">
+        <P>L</P>
+        <mat-slider step="1" min="0" max="100" [(ngModel)]="light" (change)="onChangeColor()"></mat-slider>
+        <input matInput type="number" [(ngModel)]="light" (change)="onChangeColor()"/>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hsl__code">
+    <p [innerText]="codeText"></p>
+  </div>
+</div>

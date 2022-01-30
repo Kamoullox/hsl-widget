@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HslWidgetComponent } from './components/hsl-widget/hsl-widget.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatSliderModule } from '@angular/material/slider';
+import { FormsModule, NgForm } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +15,10 @@ import { HslWidgetComponent } from './components/hsl-widget/hsl-widget.component
     HslWidgetComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
